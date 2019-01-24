@@ -1,0 +1,46 @@
+@import "./colors.less";
+@import "./variables.less";
+@import "./app/components/images/images.less";
+@import "./app/components/images/images-list.less";
+@import "./app/components/images/image-item.less";
+@import "./app/fragments/button.less";
+@import "./app/fragments/preloader.less";
+@import "./app/fragments/field-input.less";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: sans-serif;
+}
+
+.main-app {
+  min-width: 300px;
+  width: 100%;
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  .ma {
+    &_images {
+      display: none;
+    }
+
+    &_content-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      padding: 0 30px;
+    }
+
+    &_header {
+      display: flex;
+      justify-content: flex-end;
+
+      margin: 30px 0;
+    }
+  }
+}

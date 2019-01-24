@@ -1,0 +1,45 @@
+{
+  "name": "ext",
+  "version": "1.0.0",
+  "description": "ext",
+  "scripts": {
+    "start": "webpack --config ./webpack.config.js --mode development"
+  },
+  "keywords": [
+    "react",
+    "react.js",
+    "webpack",
+    "typescript",
+    "less",
+    "template"
+  ],
+  "author": "Ilya Agapov <ilyahljm@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.6.3",
+    "react-dom": "16.6.3"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@types/chrome": "0.0.77",
+    "@types/node": "10.12.10",
+    "@types/react": "16.7.8",
+    "@types/react-dom": "16.0.11",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "1.0.1",
+    "less": "3.8.1",
+    "less-loader": "4.1.0",
+    "react-hot-loader": "4.3.12",
+    "source-map-loader": "0.2.4",
+    "style-loader": "0.23.1",
+    "ts-loader": "5.3.1",
+    "typescript": "3.1.6",
+    "webpack": "4.25.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10"
+  }
+}

@@ -1,0 +1,32 @@
+.images-list {
+  width: 300px;
+  height: 300px;
+  overflow-y: scroll;
+
+  margin: 0 auto;
+  padding: 20px 10px;
+
+  border: 1px solid @ilBackgroundColor;
+  border-radius: 5px;
+
+  .il {
+    &_header {
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 20px;
+    }
+
+    &_header-title {
+      font-weight: 500;
+      font-size: 20px;
+
+      margin-bottom: 5px;
+    }
+
+    &_header-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

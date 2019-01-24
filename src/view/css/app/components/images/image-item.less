@@ -1,0 +1,31 @@
+.image-item {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: @iiBackgroundColor;
+  border-radius: 10px;
+  padding: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .ii {
+    &_download-image {
+      width: 20px;
+      height: 20px;
+
+      background: url("https://image.flaticon.com/icons/svg/131/131064.svg")
+        center no-repeat;
+    }
+
+    &_right-flex {
+      display: flex;
+      align-items: center;
+    }
+
+    &_size {
+      margin-right: 10px;
+    }
+  }
+}
