@@ -7,6 +7,7 @@ Before start:
 Test React Part. Avaliable at localhost.
 
 > uncomment 'this.\_getImagesList()' in images.tsx and comment 'this.\_initImages()' in ComponentDidMount
+
 > 'npm start'
 
 Build.
