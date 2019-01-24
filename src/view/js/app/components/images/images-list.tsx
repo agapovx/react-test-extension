@@ -9,12 +9,7 @@ interface ImagesListProps {
   sortByWeight: () => void;
 }
 
-interface ImagesListState {}
-
-export class ImagesList extends React.Component<
-  ImagesListProps,
-  ImagesListState
-> {
+export class ImagesList extends React.Component<ImagesListProps, {}> {
   constructor(props: ImagesListProps) {
     super(props);
 

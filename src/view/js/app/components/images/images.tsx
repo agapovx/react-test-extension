@@ -80,7 +80,7 @@ export class Images extends React.Component<{}, ImagesState> {
           </Button>
           <FieldInput
             type="number"
-            value={this.state.rowsCount}
+            value={this.state.rowsCount > 0 ? this.state.rowsCount : ""}
             title="Rows Count"
             onChange={this._onRowsChange}
           />
@@ -156,20 +156,21 @@ export class Images extends React.Component<{}, ImagesState> {
 
   private _onRowsChange = e => {
     if (validateNumField(e.target.value)) {
+      console.log("empty after validation: ", e.target.value);
       const targetValue: number = Number(e.target.value);
-      if (targetValue > 0) {
-        this.setState(
-          {
-            rowsCount:
-              targetValue > this.state.maxRowsCount
-                ? this.state.maxRowsCount
-                : targetValue
-          },
-          () => {
-            this._saveRowsCountToStorage();
-          }
-        );
-      }
+      console.log("target value: ", targetValue);
+
+      this.setState(
+        {
+          rowsCount:
+            targetValue > this.state.maxRowsCount
+              ? this.state.maxRowsCount
+              : targetValue
+        },
+        () => {
+          this._saveRowsCountToStorage();
+        }
+      );
     }
   };
 
@@ -214,6 +215,6 @@ export class Images extends React.Component<{}, ImagesState> {
 }
 
 function validateNumField(value: string): boolean {
-  if (value.match(/^\d+$/ || value.length === 0)) return true;
+  if (value.match(/^\d+$/) || value.length === 0) return true;
   return false;
 }
