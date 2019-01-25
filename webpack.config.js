@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -46,7 +47,17 @@ module.exports = {
     publicPath: "/",
     filename: "[name]/[name].js"
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([
+      { from: "src/manifest.json" },
+      { from: "src/view/view.html", to: "./view" },
+      {
+        from: "./src/res",
+        to: "./res"
+      }
+    ])
+  ],
   devServer: {
     contentBase: "./dist",
     hot: true
